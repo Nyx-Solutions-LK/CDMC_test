@@ -1,0 +1,29 @@
+app_engine_apis: false
+runtime: php82
+env: standard
+instance_class: F1
+
+handlers:
+  - url: /assets/css/(.*)
+    static_files: assets/css/\1
+    upload: assets/css/.*
+
+  - url: /assets/images/(.*)
+    static_files: assets/images/\1
+    upload: assets/images/.*
+
+  - url: /assets/webfonts/(.*)
+    static_files: assets/webfonts/\1
+    upload: assets/webfonts/.*
+
+  - url: /assets/js/(.*)
+    static_files: assets/js/\1
+    upload: assets/js/.*
+
+  - url: /uploads/audio/(.*)
+    static_files: uploads/audio/\1
+    upload: uploads/audio/.*
+
+  - url: /.*
+    secure: always
+    script: auto

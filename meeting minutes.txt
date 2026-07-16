@@ -1,0 +1,3 @@
+Nothing much to change on the front end
+Document only shows the notices tab, we want another tab for logged users, same permissions and architecture as the notices tab where the admin can post 3 messages and audio files in 3 languages, and the user can select with a radio button which one they want to view.
+These entries along with notices entries have to be stored in the database, and on the user side make some pagination so that it will be displayed neatly
