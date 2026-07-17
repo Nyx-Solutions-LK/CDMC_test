@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="CDMC Colombo" />
+    <meta name="author" content="root" />
+    <title>Admin Panel — CDMC Sri Lanka</title>
+    <meta property="og:title" content="CDMC Sri Lanka" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:url" content="http://www.cdmcsrilanka.com/" />
+    <meta property="og:image" content="http://www.cdmcsrilanka.com/assets/images/og-image.jpg" />
+    <meta property="og:description" content="Christian Discipleship Mentor Center Colombo" />
+    <link rel="icon" href="assets/images/logo/app-logo.png" type="image" />
+    <link href="https://fonts.googleapis.com/css?family=Khand:400,500,600,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/webfonts/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="assets/css/layerslider.css" />
+    <link rel="stylesheet" href="assets/css/template.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/category/corporate-4.css" />
+    <link rel="stylesheet" href="assets/css/cdmc-custom.css" />
+    <style>
+        .cdmc-auth-btn { font-size: 0.85rem; }
+        .cdmc-user-badge {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 0.82rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+        .cdmc-user-badge .admin-tag {
+            background: #ffd700;
+            color: #333;
+            border-radius: 10px;
+            padding: 1px 7px;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+        .nav-auth-area { display: flex; align-items: center; gap: 10px; margin-left: 16px; }
+        .page-banner {
+            background: linear-gradient(135deg, #1a3c6e 0%, #2d6bb8 100%);
+            padding: 60px 0 40px;
+            color: #fff;
+            text-align: center;
+        }
+        .cdmc-card {
+            border: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+            border-radius: 10px;
+        }
+        .notice-card { border-left: 4px solid #2d6bb8; }
+        .message-card { border-left: 4px solid #28a745; }
+        .lang-radio-group .form-check-inline { margin-right: 18px; }
+        .audio-player { width: 100%; margin-top: 10px; }
+        .pagination .page-link { color: #2d6bb8; }
+        .pagination .page-item.active .page-link { background: #2d6bb8; border-color: #2d6bb8; }
+        .table-admin th { background: #1a3c6e; color: #fff; }
+        .badge-admin { background: #ffd700; color: #333; }
+        .badge-user { background: #2d6bb8; color: #fff; }
+        .badge-disabled { background: #dc3545; color: #fff; }
+    </style>
+
+</head>
+<body class="member-page">
+<!-- Header -->
+<header class="transparent-header nav-on-banner">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light nav-white nav-down-line-active py-2">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo/app-logo.png" alt="Logo" width="22%" class="nav-logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html#soul-center">SOUL CENTER</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#governance">GOVERNANCE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contactUs">CONTACT US</a></li>
+                    <li class="nav-item nav-members-only" style="display:none"><a class="nav-link" href="notices.html">MEETINGS</a></li>
+                    <li class="nav-item nav-members-only" style="display:none"><a class="nav-link" href="messages.html">MESSAGES</a></li>
+                    <li class="nav-item nav-admin-only" style="display:none"><a class="nav-link" href="admin.html">ADMIN</a></li>
+                </ul>
+                <div class="nav-auth-area" id="navAuthArea">
+                    <a href="login.html" class="btn btn-light btn-sm cdmc-auth-btn">Login</a>
+                </div>
+                <div class="d-flex justify-content-end ms-lg-3 mt-3 mt-lg-0" style="width:15%">
+                    <img src="assets/images/logo/Soul-Center-Badge.png" alt="Badge" width="65%" />
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="page-banner">
+    <div class="container">
+        <h2 class="mb-1">Admin Panel</h2>
+        <p class="mb-0 opacity-75">User Management</p>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div id="adminAlert" class="alert" style="display:none"></div>
+
+    <!-- Quick links -->
+    <div class="d-flex gap-2 mb-5 flex-wrap">
+        <a href="notices.html" class="btn btn-outline-primary"><i class="fa fa-bell me-1"></i>Manage Meetings</a>
+        <a href="messages.html" class="btn btn-outline-success"><i class="fa fa-comments me-1"></i>Manage Messages</a>
+    </div>
+
+    <!-- Bulk Import / Export -->
+    <div class="cdmc-card card p-4 mb-5">
+        <h5 class="mb-2">Bulk Import / Export Users</h5>
+        <p class="text-muted small mb-4">
+            Import a CSV of new users (columns, in order: <code>username, email, courseId, phoneNumber</code> —
+            a header row is optional and detected automatically). Only <code>username</code> and <code>email</code>
+            are required; rows missing either are skipped and reported below instead of failing the whole file.
+            Each created user gets a random password shown only once, in the downloadable results file.
+            <br><br>
+            <strong>Export Users</strong> downloads a CSV of every non-admin user, including their real current
+            password &mdash; without resetting anything. (Accounts created before this feature existed won't have
+            one on file; use <strong>Reset &amp; Export Passwords</strong> for those, which issues everyone a
+            brand-new password instead.)
+        </p>
+        <div class="row g-3 align-items-end">
+            <div class="col-md-6">
+                <label class="form-label">CSV file</label>
+                <input type="file" id="bulkImportFile" accept=".csv,text/csv" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <button type="button" id="bulkImportBtn" class="btn btn-primary w-100"><i class="fa fa-file-upload me-1"></i>Import Users</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" id="bulkExportBtn" class="btn btn-outline-secondary w-100"><i class="fa fa-file-download me-1"></i>Export Users (CSV)</button>
+            </div>
+        </div>
+        <div class="mt-3">
+            <button type="button" id="bulkExportResetBtn" class="btn btn-sm btn-outline-danger"><i class="fa fa-key me-1"></i>Reset &amp; Export Passwords</button>
+        </div>
+        <div id="bulkImportResult" class="mt-4" style="display:none"></div>
+    </div>
+
+    <!-- Add User Form -->
+    <div class="cdmc-card card p-4 mb-5">
+        <h5 class="mb-4">Add New User</h5>
+        <form id="addUserForm">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Username <span class="text-danger">*</span></label>
+                    <input type="text" name="username" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Phone Number</label>
+                    <input type="text" name="phoneNumber" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Course ID</label>
+                    <input type="text" name="courseId" class="form-control" placeholder="(optional)">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">User Type</label>
+                    <select name="role" class="form-select">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100"><i class="fa fa-user-plus me-1"></i>Create User</button>
+                </div>
+            </div>
+            <p class="text-muted small mt-2 mb-0">A random password will be auto-generated and displayed here after submission.</p>
+        </form>
+    </div>
+
+    <!-- Users Table -->
+    <div class="cdmc-card card p-4">
+        <h5 class="mb-4">All Users (<span id="userCount">0</span>)</h5>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead class="table-admin">
+                    <tr>
+                        <th>Username</th><th>Email</th><th>Phone</th><th>Course ID</th>
+                        <th>Type</th><th>Status</th><th>Created</th><th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/admin.js"></script>
+    <!-- Footer Section Start -->
+    <footer class="footer-default-dark bg-footer" style="padding-bottom: 20px; padding-top: 50px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6">
+                    <div class="footer-widget mb-4">
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <img class="nav-logo" src="assets/images/logo/app-logo.png" alt="CDMC Logo" />
+                            </div>
+                            <div class="col-md-9">
+                                <h3 class="widget-title">Christian Discipleship Mentor Centre</h3>
+                            </div>
+                        </div>
+                        <p style="color:#fff;text-align:justify">
+                            Soul Centers are religious societies registered with the Christian Leaders Alliance (CLA) of the United States of America.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-nav mb-4">
+                        <h3 class="widget-title mb-4">Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html#soul-center">Soul Center</a></li>
+                            <li><a href="index.html#governance">Governance</a></li>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="index.html#contactUs">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget contact-widget mb-4">
+                        <h3 class="widget-title mb-4">Contact Us</h3>
+                        <ul style="color:#fff">
+                            <li>18/7, De Mel Road, Katubedda, Moratuwa, Sri Lanka. 10400</li>
+                            <li>94 716833489</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright bg-dark text-default py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="text-white">© 2023 Christian Discipleship Mentor Centre All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="bg-primary text-white" id="scroll"><i class="fa fa-angle-up"></i></a>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/site.js"></script>
+
+</body>
+</html>

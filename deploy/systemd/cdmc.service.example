@@ -1,0 +1,23 @@
+[Unit]
+Description=CDMC web app
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=cdmc
+Group=cdmc
+WorkingDirectory=/opt/cdmc/backend
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/cdmc/cdmc.env
+ExecStart=/usr/bin/node src/server.js
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/var/lib/cdmc /opt/cdmc/backend/data
+
+[Install]
+WantedBy=multi-user.target
