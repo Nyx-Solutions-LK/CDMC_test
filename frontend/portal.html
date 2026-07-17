@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nyx Solutions — Client Portal</title>
+  <script src="assets/js/theme.js"></script>
+  <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-name">Nyx Solutions</div>
+          <div class="brand-sub">Client Portal</div>
+        </div>
+      </div>
+      <nav id="navLinks"></nav>
+      <div class="sidebar-footer">
+        <div class="nav-link" data-nav="account"><span class="nav-icon">&#9881;</span> Account Settings</div>
+        <div class="nav-link" id="logoutLink"><span class="nav-icon">&#9099;</span> Sign Out</div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <div class="topbar">
+        <div class="flex gap-12">
+          <button type="button" class="btn btn-icon" id="sidebarToggle" style="display:none">&#9776;</button>
+          <div class="topbar-title" id="topbarTitle">Announcements</div>
+        </div>
+        <div class="topbar-right">
+          <button type="button" class="theme-toggle" data-theme-toggle></button>
+          <div class="user-chip" data-nav="account">
+            <div class="user-avatar" id="userAvatar">?</div>
+            <span id="userChipName">&hellip;</span>
+          </div>
+        </div>
+      </div>
+      <div class="content" id="content"></div>
+    </div>
+  </div>
+
+  <div class="toast-stack" id="toastStack"></div>
+  <div id="modalRoot"></div>
+
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/portal.js"></script>
+</body>
+</html>

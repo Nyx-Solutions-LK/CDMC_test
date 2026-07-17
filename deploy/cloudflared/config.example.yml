@@ -1,7 +1,0 @@
-tunnel: <TUNNEL-UUID>
-credentials-file: /etc/cloudflared/<TUNNEL-UUID>.json
-
-ingress:
-  - hostname: cdmc.example.com
-    service: http://127.0.0.1:4000
-  - service: http_status:404
